@@ -1,0 +1,48 @@
+full stack E-commerce step (MREN) application 
+-- Fontend
+1. Install tailwind css - react 
+2. slick-carousel
+3. react-slick
+4. react-router
+5. react-router-dom
+6. react-redux 
+7. react-icons
+8. apexcharts
+9. react-apexcharts
+10. moment
+11. flowbite
+12. axios 
+13. @reduxjs/tootlkit
+14. @paypal/react-paypal-js
+
+npm i slick-carousel react-slick react-toastify react-router react-router-dom react-redux react-icons apexcharts react-apexcharts moment flowbite axios @reduxjs/toolkit @paypal/react-paypal-js
+
+---------------------------------------------------------------------
+--Backend
+1. nodemon 
+2. multer
+3. mongoose
+4. jsonwebtocken
+5. express-formidable
+6. express-async-handler
+7. express
+8. dotenv 
+9. cors 
+10. cookie-parse
+11. concurrently
+12. bcryptjs
+
+npm i nodemon multer mongoose jsonwebtoken express-formidable express-async-handler express dotenv cors cookie-parser concurrently bcryptjs
+
+
+step: 1
+----> make folder stracture 
+	-->config
+	-->controllers
+	-->middlewares
+	-->routes
+	-->utils
+	index.js
+inside for config folder
+  --> db.js
+	
