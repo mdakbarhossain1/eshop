@@ -13,11 +13,11 @@ const Navigation = () => {
 
     const { userInfo } = useSelector(state => state.auth)
 
-    const [dropdoenOpen, setDropdownOpen] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     const [showSidebar, setShowSidebar] = useState(false)
 
     const toggleDropdown = () => {
-        setDropdownOpen(!dropdoenOpen)
+        setDropdownOpen(!dropdownOpen)
     };
 
     const toggleSidebar = () => {
