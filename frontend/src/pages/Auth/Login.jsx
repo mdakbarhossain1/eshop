@@ -28,7 +28,18 @@ const Login = () => {
     }
   }, [navigate, redirect, userInfo])
 
-  console.log(redirect)
+  // console.log(redirect)
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await login({ email, password }).unwrap();
+      console.log(res);
+      dispatch(setCredentials({ ...res }));
+      navigate(redirect);
+    } catch (err) {
+      toast.error(err?.data?.message || err.error);
+    }
+  };
 
   return (
     <div>
@@ -36,7 +47,7 @@ const Login = () => {
         <div className="mr-[4rem] mt-[5rem] " >
           <h1 className="text-2xl font-semibold mb-4">Sign In</h1>
 
-          <form action="" className="container w-[40rem]">
+          <form onSubmit={submitHandler} className="container w-[40rem]">
             <div className="my-[2rem]">
               <label htmlFor="email" className="block text-sm font-medium ">Email Address</label>
               <input
