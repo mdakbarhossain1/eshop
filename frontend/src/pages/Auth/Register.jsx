@@ -33,21 +33,21 @@ const Register = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-    
+
         if (password !== confirmPassword) {
-          toast.error("Passwords do not match");
+            toast.error("Passwords do not match");
         } else {
-          try {
-            const res = await register({ username, email, password }).unwrap();
-            dispatch(setCredentials({ ...res }));
-            navigate(redirect);
-            toast.success("User successfully registered");
-          } catch (err) {
-            console.log(err);
-            toast.error(err.data.message);
-          }
+            try {
+                const res = await register({ username, email, password }).unwrap();
+                dispatch(setCredentials({ ...res }));
+                navigate(redirect);
+                toast.success("User successfully registered");
+            } catch (err) {
+                toast.error(err.data.message);
+                console.log(err);
+            }
         }
-      };
+    };
 
 
     return (
